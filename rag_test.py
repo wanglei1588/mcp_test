@@ -7,6 +7,16 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_community.embeddings import DashScopeEmbeddings
 from env_utils import QWEN_API_KEY, QWEN_BASE_URL, SMITH_API_KEY
 from langchain_chroma import Chroma
+import dotenv
+
+
+# dotenv.load_dotenv()
+import os
+
+
+os.environ["LANGSMITH_TRACING"] = "true"
+os.environ["LANGSMITH_PROJECT"] = "first-pro"
+os.environ["LANGSMITH_API_KEY"] = SMITH_API_KEY
 
 llm = ChatTongyi(
     api_key=QWEN_API_KEY,

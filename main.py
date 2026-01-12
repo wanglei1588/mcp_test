@@ -42,7 +42,7 @@ chain = prompt | llm1
 if __name__ == '__main__':
     print(langchain.__version__)
 
-    res = chain.invoke({"input": "你最喜欢的汽车是什么？为什么？"})
+    res = chain.invoke({"input": "你最不喜欢的汽车是什么？为什么？"})
     print(res)
 
 
