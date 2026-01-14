@@ -60,7 +60,16 @@ system_prompt = """
 agent = create_agent(
     model=llm,
     tools=[retrieve_context],
-    system_prompt=system_prompt
+    system_prompt=system_prompt,
+    middleware=[
+        lambda inputs, outputs: print(f"输入：{inputs}"),
+        lambda inputs, outputs: print(f"输出：{outputs}"),
+        SummarizeMiddleware(
+            llm=llm,
+            system_prompt="请总结并返回结果",
+            output_parser=StrOutputParser(),
+        ),
+    ],
 )
 
 
