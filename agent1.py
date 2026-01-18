@@ -161,3 +161,74 @@ if __name__ == '__main__':
     # for message in messages:
     #     message.pretty_print()
 
+
+
+"""
+result:
+{'messages': [HumanMessage(content='What is the weather in ShangHai', 
+                            additional_kwargs={}, 
+                            response_metadata={}, 
+                            id='35fefa49-0ee2-4c87-a069-c0803533b8be'
+                            ), 
+                AIMessage(content='', 
+                            additional_kwargs={'refusal': None}, 
+                            response_metadata={'token_usage': {'completion_tokens': 21, 
+                                                                'prompt_tokens': 166, 
+                                                                'total_tokens': 187, 
+                                                                'completion_tokens_details': None, 
+                                                                'prompt_tokens_details': {'audio_tokens': None, 
+                                                                                            'cached_tokens': 0}}, 
+                                                                'model_provider': 'openai', 
+                                                                'model_name': 'qwen-plus', 
+                                                                'system_fingerprint': None, 
+                                                                'id': 'chatcmpl-68d6f435-3a89-9c09-bd84-abdf87a49723', 
+                                                                'finish_reason': 'tool_calls', 
+                                                                'logprobs': None
+                                                                }, 
+                            id='lc_run--019bd130-49fc-7ce3-9a9a-c7b7f4106548-0', 
+                            tool_calls=[{'name': 'aaa', 
+                                        'args': {'city': 'ShangHai'}, 
+                                        'id': 'call_f226f0130acc42a0ab026e', 
+                                        'type': 'tool_call'
+                                        }], 
+                            invalid_tool_calls=[], 
+                            usage_metadata={'input_tokens': 166, 
+                                            'output_tokens': 21, 
+                                            'total_tokens': 187, 
+                                            'input_token_details': {'cache_read': 0}, 
+                                            'output_token_details': {}
+                                            }
+                            ), 
+                ToolMessage(content="It's alwasy sunny in ShangHai!", 
+                            name='aaa', 
+                            id='098dbd70-ec88-427f-8326-a13059bf6b14', 
+                            tool_call_id='call_f226f0130acc42a0ab026e'
+                            ), 
+                AIMessage(content="It seems like it's always sunny in Shanghai! Enjoy the bright weather! 😊☀️", 
+                        additional_kwargs={'refusal': None}, 
+                        response_metadata={'token_usage': {'completion_tokens': 19, 
+                                                            'prompt_tokens': 212, 
+                                                            'total_tokens': 231, 
+                                                            'completion_tokens_details': None, 
+                                                            'prompt_tokens_details': {'audio_tokens': None, 
+                                                                                        'cached_tokens': 0}}, 
+                                                            'model_provider': 'openai', 
+                                                            'model_name': 'qwen-plus', 
+                                                            'system_fingerprint': None, 
+                                                            'id': 'chatcmpl-579f69a4-1d0d-95c8-953b-c7cce4171bf3', 
+                                                            'finish_reason': 'stop', 
+                                                            'logprobs': None}, 
+                                            id='lc_run--019bd130-5189-7c82-b3a9-c80593d4710a-0', 
+                                            tool_calls=[], 
+                                            invalid_tool_calls=[], 
+                                            usage_metadata={'input_tokens': 212, 
+                                                            'output_tokens': 19, 
+                                                            'total_tokens': 231, 
+                                                            'input_token_details': {'cache_read': 0}, 
+                                                            'output_token_details': {}
+                                                            }
+                        )
+                ]
+}
+
+"""
